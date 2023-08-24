@@ -37,15 +37,15 @@ const diameter = function(r){
 //if you want to custom your own map like function
 
 
-Array.prototype.calculate = function(refr,logic){
+Array.prototype.calculate = function(logic){
       const output = [];
-      for(let i=0;i<refr.length;i++){
-          output.push(logic(refr[i]));
+      for(let i=0;i<this.length;i++){
+          output.push(logic(this[i]));
       }
       return output;
    };
 
    //loader
-console.log(radius.calculate(radius,area));
-console.log(radius.calculate(radius,circumference));
-console.log(radius.calculate(radius,diameter));
+console.log(radius.calculate(area));
+console.log(radius.calculate(circumference));
+console.log(radius.calculate(diameter));
